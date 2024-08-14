@@ -1,0 +1,48 @@
+
+{% load static %}
+
+<div class="form-box">
+    <div class="inner">
+       <!-- Appointment form -->
+       <form method="POST" id="apointmentform" class="site-apointment-form">
+          {% csrf_token %}
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+             <!-- Name -->
+             <label><input type="text" name="contact_name" placeholder="Name" required="required"></label>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+             <!-- Email -->
+             <label><input type="email" name="contact_email" placeholder="Email" required="required"></label>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+             <!-- Phone -->
+             <label><input type="number" name="contact_phone" placeholder="Phone" required="required"></label>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+             <!-- No. of. people -->
+             <label><input type="number" name="noofpeople" placeholder="No. of. people" required="required"></label>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+             <!-- Date -->
+             <label><input type="text" name="date" id="date" value="" placeholder="YY-MM-DD" /></label>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+             <!-- Time -->
+             <label>
+                <select name="time">
+                   <option>Please select </option>
+                   <option value="Breackfast">Breakfast: 8AM to 10AM </option>
+                   <option value="Lunch">Lunch: 12PM to 02AM </option>
+                   <option value="Dinner">Dinner: 8PM to 11AM </option>
+                </select>
+             </label>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+             <!-- Message -->
+             <label><textarea name="contact_message" placeholder="Message" required></textarea></label>
+             <!-- Submit -->
+          </div>
+          <button type="submit">Book Table <i class="fa fa-arrow-right"> </i></button>
+       </form>
+    </div>
+</div>
